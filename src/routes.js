@@ -6,6 +6,8 @@ import Contact from './components/Contact.vue';
 import Shop from './components/Shop.vue';
 import Home from './components/Home.vue';
 import ShopItem from './components/ShopItem.vue';
+import ThankYou from './components/ThankYou.vue';
+import AddProduct from './components/AddProduct.vue';
 
 Vue.use(Router);
 
@@ -40,6 +42,16 @@ export default new Router({
             path:"/contact",
             name:"contact",
             component:Contact
+        },
+        {
+            path:"/thankyou",
+            name:"thanyou",
+            component: ThankYou
+        },
+        {
+            path:"/addproduct",
+            name:"addproduct",
+            component: AddProduct
         }
     ]
 })

@@ -1,5 +1,5 @@
 <template>
-    <div class="jumbotron">
+    <div>
         <form class="registerform" @submit="formSubmit" novalidate=true>
             <p v-if="errors.length" class="errorColor">
                 <b>Please corrent the following errors</b>
@@ -8,25 +8,25 @@
                 </ul>
             </p>
             <div class="form-group">
-                <input placeholder="First name" class="form-control-small" type="text" name="firstname" v-model="firstName"/><br>
+                <input placeholder="First name" class="form-control" type="text" name="firstname" v-model="firstName"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Last name" class="form-control-small" type="text" name="lastname" v-model="lastName"/><br>
+                <input placeholder="Last name" class="form-control" type="text" name="lastname" v-model="lastName"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Username" class="form-control-small" type="text" name="username" v-model="userName"/><br>
+                <input placeholder="Username" class="form-control" type="text" name="username" v-model="userName"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Email" class="form-control-small" type="email" name="email" v-model="email"/><br>
+                <input placeholder="Email" class="form-control" type="email" name="email" v-model="email"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Birth date" class="form-control-small" type="date" name="birthdate" v-model="birthDate"/><br>
+                <input placeholder="Birth date" class="form-control" type="date" name="birthdate" v-model="birthDate"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Password" class="form-control-small" type="password" name="password" v-model="passWord"/><br>
+                <input placeholder="Password" class="form-control" type="password" name="password" v-model="passWord"/><br>
             </div>
             <div class="form-group">
-                <input placeholder="Repeat password" class="form-control-small" type="password" name="repeatpassword" v-model="repeatPassword"/><br>
+                <input placeholder="Repeat password" class="form-control" type="password" name="repeatpassword" v-model="repeatPassword"/><br>
             </div>
             <input class="btn btn-primary" type="submit" value="Register"/>
         </form>
@@ -93,7 +93,7 @@ export default {
                 repeatpassword: this.repeatPassword
         });
         if(this.errors.length == 0){
-            this.$router.push('/');
+            this.$router.push('/thankyou');
         }
         e.preventDefault();
         }
@@ -103,7 +103,7 @@ export default {
 
 <style scoped>
 .registerform {
-    
+    padding: 100px;
 }
 .errorColor{
     color: red;

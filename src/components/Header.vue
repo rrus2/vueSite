@@ -1,6 +1,7 @@
 <template>
   <div class="navbar navbar-expand-lg navbar-light bg-dark">
       <router-link to="/" class="btn btn-primary">Home</router-link>
+      <router-link to="/addproduct" class="btn btn-primary">Add product</router-link>
       <router-link to="/register" class="btn btn-primary">Register</router-link>
       <router-link to="/login" class="btn btn-primary">Login</router-link>
       <router-link to="/shop" class="btn btn-primary">Shop</router-link>
