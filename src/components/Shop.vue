@@ -1,6 +1,9 @@
 <template>
     <div class="jumbotron">
-        <li class="rounded-pill bg-light" v-bind:key="product._id" v-for="product in products">{{ product.name }}<br>{{product.price}} $<br><router-link class="btn btn-primary" v-bind:to="'/shop/' + product.id">View</router-link></li><br>
+        <li class="rounded-pill bg-light" v-bind:key="product.id" v-for="product in products">{{ product.name }}<br>
+        {{product.price}} $<br>
+        <img @bind="product.image" alt="LOL"><br>
+        <router-link class="btn btn-primary" v-bind:to="'/shop/' + product.id">View</router-link></li><br>
     </div>
 </template>
 

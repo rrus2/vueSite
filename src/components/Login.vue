@@ -24,9 +24,10 @@ export default {
         }
     },
     methods: {
-        loginUser(e){
+        async loginUser(e){
             e.preventDefault();
-            axios.post("http://127.0.0.1:5000/login", {username: this.username, password: this.password}).then(data => this.user = data.data);
+            await axios.post("http://127.0.0.1:5000/login", {username: this.username, password: this.password}).then(data => this.$store.state.modules.user = data.data);
+            this.user = this.$store.state.modules.user;
         }
     }
 }
